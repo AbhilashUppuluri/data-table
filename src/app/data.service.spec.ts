@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 
 import { DataService } from './data.service';
 
-fdescribe('DataService', () => {
+describe('DataService', () => {
   let service: DataService;
   let httpMock: HttpTestingController;
 
