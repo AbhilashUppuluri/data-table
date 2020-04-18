@@ -74,4 +74,12 @@ describe('DataService', () => {
     httpMock.verify();
   });
 
+  it('should be able submit rowId, status API', () => {
+    service.submitRow(2, 'expired').subscribe((data: any) => {
+    });
+    const mockRequest = httpMock.expectOne('/api/submit');
+    expect(mockRequest.request.method).toBe('POST');
+    httpMock.verify();
+  });
+
 });
