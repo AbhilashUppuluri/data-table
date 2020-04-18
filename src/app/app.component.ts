@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DataService } from './data.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +6,5 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Data Table'
-  public tableData = [];
-
-  constructor(private dataService: DataService) {}
-
-  ngOnInit(): void {
-    this.getTableData();
-  }
-  
-  getTableData() {
-    this.dataService.getSampleData().subscribe((response: any) => {
-      this.tableData = response;
-    });
-  }
+  title = 'Data Table';
 }
